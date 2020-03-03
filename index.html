@@ -19,33 +19,35 @@
     </head>
     <body>
         <!-- Load Facebook SDK for JavaScript -->
-      <div id="fb-root"></div>
-      <script>
-        window.fbAsyncInit = function() {
-          FB.init({
-            xfbml            : true,
-            version          : 'v6.0'
-          });
-        };
+        <div id="fb-root"></div>
+        <script>
+            window.fbAsyncInit = function() 
+            {
+                FB.init({
+                    xfbml            : true,
+                    version          : 'v6.0'
+                });
+            };
 
-        (function(d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) return;
-        js = d.createElement(s); js.id = id;
-        js.src = 'https://connect.facebook.net/es_ES/sdk/xfbml.customerchat.js';
-        fjs.parentNode.insertBefore(js, fjs);
-      }(document, 'script', 'facebook-jssdk'));</script>
-
-      <!-- Your customer chat code -->
-      <div class="fb-customerchat"
-        attribution=setup_tool
-        page_id="102253518054062"
-  theme_color="#0084ff"
-  logged_in_greeting="¡Hola! !Estaremos encantados de conocerte, desea algún articulo!?"
-  logged_out_greeting="¡Hola! !Estaremos encantados de conocerte, desea algún articulo!?">
-      </div>
-
-
+            (function(d, s, id) 
+            {
+                var js, fjs = d.getElementsByTagName(s)[0];
+                if (d.getElementById(id)) return;
+                    js = d.createElement(s); js.id = id;
+                    js.src = 'https://connect.facebook.net/es_ES/sdk/xfbml.customerchat.js';
+                fjs.parentNode.insertBefore(js, fjs);
+            }
+            (document, 'script', 'facebook-jssdk'));
+        </script>
+        <!-- Your customer chat code -->
+        <div class="fb-customerchat"
+            attribution=setup_tool
+            page_id="102253518054062"
+            theme_color="#0084ff"
+            logged_in_greeting="¡Hola! !Estaremos encantados de conocerte, desea algún articulo!?"
+            logged_out_greeting="¡Hola! !Estaremos encantados de conocerte, desea algún articulo!?">
+        </div>
+        
         <header id="header" class="header-scrolled">
             <div class="container">
                 <div class="logo float-left">
@@ -103,7 +105,17 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-12 col-sm-6 col-md-6 col-lg-4">
+                    <div class="col-12 col-sm-6 col-md-6 col-lg-4 d-none d-sm-block">
+                        <div id="topbar">
+                            <div class="container">
+                                <div class="social-links mt-3">
+                                    <a href="https://www.facebook.com/Tejiendo-Estilos-102253518054062/" target="_blank" class="facebook"><i class="fa fa-facebook fa-3x"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- optimizado para vista movil -->
+                    <div class="col-2 col-sm-6 col-md-6 col-lg-4 d-block d-sm-none">
                         <div id="topbar">
                             <div class="container">
                                 <div class="social-links mt-3">
