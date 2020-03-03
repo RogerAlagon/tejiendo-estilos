@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <title>Tejiendo Estilos</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="Tejiendo estilos, abrigos ,gorros , chalinas, chompas, accesorios" name="description">
+
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,500,600,700,700i|Montserrat:300,400,500,600,700" rel="stylesheet">
+
+        <!-- Bootstrap CSS File -->
+        <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+        <!-- Main Stylesheet File -->
+        <link href="css/style.css" rel="stylesheet">
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+    </head>
+    <body>
+        <!-- Load Facebook SDK for JavaScript -->
+      <div id="fb-root"></div>
+      <script>
+        window.fbAsyncInit = function() {
+          FB.init({
+            xfbml            : true,
+            version          : 'v6.0'
+          });
+        };
+
+        (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/es_ES/sdk/xfbml.customerchat.js';
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));</script>
+
+      <!-- Your customer chat code -->
+      <div class="fb-customerchat"
+        attribution=setup_tool
+        page_id="102253518054062"
+  theme_color="#0084ff"
+  logged_in_greeting="¡Hola! !Estaremos encantados de conocerte, desea algún articulo!?"
+  logged_out_greeting="¡Hola! !Estaremos encantados de conocerte, desea algún articulo!?">
+      </div>
+
+
+        <header id="header" class="header-scrolled">
+            <div class="container">
+                <div class="logo float-left">
+                    <h1 class="text-light"><a href="index.html" class="scrollto"><span>Tejiendo Estilos</span></a></h1>
+                </div>
+                <nav class="main-nav float-right d-none d-lg-block">
+                    <ul>
+                        <li class="active"><a href="index.html">Inicio</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <!--Banner -->
+        <section id="intro" class="clearfix d-md-none d-lg-block">
+            <div class="container d-flex h-100">
+                <div class="row justify-content-center align-self-center">
+                    <div class="col-sm-4 col-md-6 col-lg-6 col-xl-6 intro-info order-md-first order-last">
+                        <h2>Tejiendo estilos <br><span>100% lana !</span></h2>
+                    </div>
+                    <div class="col-sm-8 col-md-4 col-lg-6 col-xl-6 intro-img order-md-last order-first">
+                        <img src="img/banner.png" alt="" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--Banner tablet -->
+        <section id="md" class="clearfix d-none d-md-block d-lg-none">
+            <div class="container d-flex h-100">
+                <div class="row justify-content-center align-self-center">
+                    <div class="col-sm-4 col-md-6 col-lg-6 col-xl-6 md-info order-md-first order-last">
+                        <h2>Tejiendo estilos <br><span>100% lana !</span></h2>
+                    </div>
+                    <div class="col-sm-8 col-md-4 col-lg-6 col-xl-6 intro-img order-md-last order-first">
+                        <img src="img/banner.png" alt="" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Seccion Productos -->
+        <section id="services">
+            <div class="container">
+                <header class="section-header">
+                </header>
+                <div class="row" id="img">
+                </div>
+            </div>
+        </section>
+        <footer id="footer" style="background-color: rgb(245, 248, 253);">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-sm-6 col-md-6 col-lg-8">
+                        <div class="container">
+                            <div class="copyright text-right">
+                                Copyright &copy; <strong>2020 tejiendo estilos</strong>. Todos los derechos reservados
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-6 col-lg-4">
+                        <div id="topbar">
+                            <div class="container">
+                                <div class="social-links mt-3">
+                                    <a href="https://www.facebook.com/Tejiendo-Estilos-102253518054062/" target="_blank" class="facebook"><i class="fa fa-facebook fa-3x"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>  
+        </footer>
+       
+        <!--<script src="lib/jquery/jquery.min.js"></script>
+        <script src="lib/jquery/jquery-migrate.min.js"></script>-->
+        <script src="lib/mobile-nav/mobile-nav.js"></script>
+        <script type="text/javascript" src="js/datos.js"></script>
+    </body>
+</html>
