@@ -7,7 +7,6 @@ var descripcion = 'database/desc.txt'
 var precio = 'database/precio.txt'
 var codigo = 'database/codigo.txt'
 
-
 archivo.open("GET", imagenes, false)
 archivo.send(null)
 var rpt_img = archivo.responseText
@@ -35,44 +34,32 @@ for(var i = 0; i < lista_img.length; i++)
     Arr_codigo.push([lista_cod[i]])
 }
 
-var array = [
-    ["BOOTSTRAP4.jpg","Chalina para mujer - hombre "],
-    ["CSS_.jpg","Abrigo para hombre"],
-    ["JAVASCRIPT__.jpg","Chompa Unisex"],
-]
-//console.log(JSON.stringify(array,null,2))
-console.log(JSON.stringify(Arr_data,null,2))
-console.log(JSON.stringify(Arr_precio, null, 2))
-console.log(JSON.stringify(Arr_codigo,null,2))
-
 for(var i = 0; i < Arr_data.length; i++)
 {
-    var img = "<div class='col-12 col-sm-12 col-md-6 col-lg-4'>"
-                    +"<div class='box'>"
-                        +"<div class='col-12 col-sm-12 col-md-12 col-lg-12'>"
-                            +"<img src='img/" + Arr_data[i][0] + "' class='img-fluid'>"
-                        +"</div>"
-                        +"</br>"
-                        for(var j = 1; j < Arr_data[i].length; j++)
-                        {
-                            var nombre_pro = "<h4 class='title'><a>"+ Arr_data[i][j]+"</a></h4>"
-                            +"<ul class='description'>"
-                                +"<li>" + Arr_precio[i] + "</li>"
-                                +"<li>"+ Arr_codigo[i] + "</li>"
-                                +"<li>Consulta y/o duda por : </li>"
-                            +"</ul> </br>"
-
-                            +"<div class='row'>"
-                                
-                                    +"<div class='col-6 col-sm-6 col-md-6 col-lg-6'>"
-                                        +"<a href='https://api.whatsapp.com/send?phone=51957752241&text="
-                                            + Arr_data[i][j] + " " + Arr_precio[i] +" " + Arr_codigo[i] +
-                                        "' target='_blank'><i class='fa fa-whatsapp fa-3x'></i></a>"
-                                    +"</div>"
-                            +"</div>"
-                    +"</div>"
-                +"</div>"
-                            document.getElementById("img").innerHTML += img + nombre_pro
-                        }
-                       
+    var img  = 
+    `<div class='col-12 col-sm-12 col-md-6 col-lg-4'> 
+        <div class='box'>
+            <div class='col-12 col-sm-12 col-md-12 col-lg-12'>
+                <img src='img/${ Arr_data[i][0]} ' class='img-fluid'>
+            </div>
+            </br>`
+            for(var j = 1; j < Arr_data[i].length; j++)
+            {
+                var nombre_pro = 
+            `<h4 class='title'><a> ${ Arr_data[i][j] } </a></h4>
+                <ul class='description'>
+                    <li> ${ Arr_precio[i] } </li>
+                    <li> ${ Arr_codigo[i] } </li>
+                    <li>Consulta y/o duda por: </li>
+                </ul></br>
+                <div class='row'>
+                    <div class='col-6 col-sm-6 col-md-6 col-lg-6'>
+                        <a href='https://api.whatsapp.com/send?phone=51957752241&text=${ Arr_data[i][j] +" "+ Arr_precio[i] +" "+Arr_codigo[i] }' 
+                        target='_blank'><i class='fa fa-whatsapp fa-3x'></i></a>
+                    </div>
+               </div>
+        </div>
+    </div> `
+                document.getElementById("img").innerHTML += img + nombre_pro 
+            }
 }
