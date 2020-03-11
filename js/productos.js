@@ -50,15 +50,6 @@ class Producto
         {
             Arr_data.push([ lista_img[i], lista_desc[i], lista_pre[i], lista_cod[i] ])
         }
-        console.log(JSON.stringify(Arr_data,2))
-
-        for(var i = 0; i < Arr_data.length; i++)
-        {
-            console.log(`img ${ Arr_data[i][0] } `)
-            console.log(`desc ${ Arr_data[i][1] } `)
-            console.log(`pre ${ Arr_data[i][2] } `)
-            console.log(`cod ${ Arr_data[i][3] } `)
-        }
 
         for(var i = 0; i < Arr_data.length; i++)
         {
