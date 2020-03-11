@@ -1,4 +1,4 @@
-var Arr_data = []
+/*var Arr_data = []
 var Arr_precio = []
 var Arr_codigo = []
 var archivo = new XMLHttpRequest()
@@ -63,3 +63,5 @@ for(var i = 0; i < Arr_data.length; i++)
                 document.getElementById("img").innerHTML += img + nombre_pro 
             }
 }
+*/
+
