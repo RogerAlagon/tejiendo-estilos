@@ -1,4 +1,5 @@
 var Arr_data = []
+var Arr_productos = []
 var archivos = new XMLHttpRequest()
 var rpt_archivo
 var lista_arch
@@ -45,15 +46,40 @@ class Producto
         var lista_desc = this.leerArchivo(descripcion)
         var lista_pre = this.leerArchivo(precio)
         var lista_cod = this.leerArchivo(codigo)
-
+        var img
+        var pedido
         for(var i= 0; i < lista_img.length; i++)
         {
             Arr_data.push([ lista_img[i], lista_desc[i], lista_pre[i], lista_cod[i] ])
         }
 
-        for(var i = 0; i < Arr_data.length; i++)
+        if(Arr_data[0][3] = 'AMEDIDA000')
         {
-            var img  = 
+            pedido = `<div class='col-12 col-sm-12 col-md-6 col-lg-4'> 
+            <div class='box bg-warning'>
+                <div class='col-12 col-sm-12 col-md-12 col-lg-12'>
+                    <img src='img/${ Arr_data[0][0]} ' class='img-fluid'>
+                </div>
+                </br>
+                <h4 class='title'><a> ${ Arr_data[0][1] } </a></h4>
+                    <ul class='description'>
+                        <li> ${ Arr_data[0][2] } </li>
+                        <li> ${ Arr_data[0][3] } </li>
+                        <li>Consulta y/o duda por: </li>
+                    </ul></br>
+                    <div class='row'>
+                        <div class='col-6 col-sm-6 col-md-6 col-lg-6'>
+                            <a href='https://api.whatsapp.com/send?phone=51957752241&text=${ Arr_data[0][1] +" "+ Arr_data[0][2] +" "+Arr_data[0][3] }' 
+                            target='_blank'><i class='fa fa-whatsapp fa-3x'></i></a>
+                        </div>
+                   </div>
+            </div>
+        </div> `
+        }
+        Arr_productos.push(pedido)
+        for(var i = 1; i < Arr_data.length; i++)
+        {
+            img  = 
             `<div class='col-12 col-sm-12 col-md-6 col-lg-4'> 
                 <div class='box'>
                     <div class='col-12 col-sm-12 col-md-12 col-lg-12'>
@@ -74,8 +100,12 @@ class Producto
                        </div>
                 </div>
             </div> `
-            document.getElementById("img").innerHTML += img 
-                    
+            Arr_productos.push(img)
+        }
+
+        for(var i = 0; i < Arr_productos.length; i++)
+        {
+            document.getElementById("img").innerHTML += Arr_productos[i]
         }
     }
 
